@@ -16,19 +16,19 @@ class CustomMethodTests {
 
     private final CarMapper carMapper = Mappers.getMapper(CarMapper.class);
     private final AbstractCarMapper abstractCarMapper = Mappers.getMapper(AbstractCarMapper.class);
-    private final Person person = new Person("meeju");
+    private final Person person = new Person("miju");
 
     @Test
     void Should_FieldValueIsMapped_When_CustomMethodIsDefined() {
         PersonDto personDto = carMapper.personToPersonDto(person);
 
-        assertEquals("meeju", personDto.getFullName());
+        assertEquals("miju", personDto.getFullName());
     }
 
     @Test
     void Should_FieldValueIsMapped_When_CustomMethodInAbstractClassIsDefined() {
         PersonDto personDto = abstractCarMapper.personToPersonDto(person);
 
-        assertEquals("meeju", personDto.getFullName());
+        assertEquals("miju", personDto.getFullName());
     }
 }

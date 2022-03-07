@@ -16,15 +16,15 @@ class NestedBeanPropertyTests {
 
     private final CustomMapper customMapper = Mappers.getMapper(CustomMapper.class);
     private CustomDto customDto = new CustomDto(1L, "female",
-            new RecordDto(2L, "meeju", 7), new AccountDto(3L, "meejuid", true));
+             new RecordDto(2L, "miju", 7), new AccountDto(3L, "mijuid", true));
 
     @Test
     void Should_FieldValueIsMapped_When_NestedBeanProperty() {
         Custom custom = customMapper.customDtoToCustom(customDto);
 
         assertEquals("female", custom.getGender());
-        assertEquals("meeju", custom.getName());
-        assertEquals("meejuid", custom.getLoginId());
+        assertEquals("miju", custom.getName());
+        assertEquals("mijuid", custom.getLoginId());
     }
 
     @Test
