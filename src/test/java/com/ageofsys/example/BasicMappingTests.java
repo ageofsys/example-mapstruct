@@ -41,4 +41,11 @@ class BasicMappingTests {
         assertNull(carDto.getModel());
     }
 
+    @Test
+    void Should_ReturnNull_When_SourceIsNull() {
+        CarDto carDto = carMapper.carToCarDto(null);
+
+        assertNull(carDto);
+    }
+
 }
