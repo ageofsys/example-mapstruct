@@ -140,4 +140,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-.idea/sonarlint
+# Sonarlint Plugin
+.idea/sonarlint/
+
+# Git toolbox
+.idea/git_toolbox_prj.xml
